@@ -1,0 +1,45 @@
+1.Reverse a string
+
+write a python program to reverse a string
+
+Approach 1:Using String Slicing
+
+    def reverse_string(s):
+        return s[::-1]
+
+    s="Python"
+    print("Reversed String",reverse_string(s))
+
+Explanation:
+   s[::-1] means start from the end and go backwards one step at a time.
+   it returns reverse string
+
+Approach 2:Using a loop
+
+    def reverse_string(s):
+        reverse_str=''
+
+        for char in s:
+          reverse_str=char+reverse_str
+        return reverse_str
+
+    s="python"
+    print("Reversed String",reverse_string(s))
+
+Explanation:
+    For each character,prepend it to the result.
+    This builds the reversed string step by step.
+
+Approach 3:Using Built-in reversed() function
+    def reverse_string(s):
+        return "".join(reversed(s))
+
+    s="Python:
+    print("Reversed String",reverse_string(s))
+
+Explanation:
+    reversed(s) returns an iterator.
+
+    "".join() joins all characters ro form a final string
+
+
