@@ -1,0 +1,35 @@
+Problem Statement:
+
+Find and Print Largest element in a list
+
+Approach 1:Using max() function
+   def find_largest(lst):
+    return max(lst)
+
+
+lst=[23,12,3,45,65,45]
+
+print("Largest Element: ",find_largest(lst))
+
+Explanation:
+    max() is a built-in function that returns the largest element in the iterable
+
+Approach 2:Using a Loop
+
+def find_largest(lst):
+    if not lst:
+        return None
+    largest=lst[0]
+
+    for num in lst:
+        if largest<num:
+            largest=num
+    return largest
+
+lst=[23,43,54,5,4,34,545]
+
+print("Largest Element: ",find_largest(lst))
+
+Explanation:
+    *Initialize largest with first element
+    *Loop through the list and update largest when a bigger number is found
